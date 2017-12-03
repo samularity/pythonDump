@@ -14,12 +14,14 @@ def main():
     """
     btc_eur = "https://api.coinmarketcap.com/v1/ticker/bitcoin/?convert=EUR"
     bch_eur = "https://api.coinmarketcap.com/v1/ticker/bitcoin-cash/?convert=EUR"
+    iota_eur = "https://api.coinmarketcap.com/v1/ticker/iota/?convert=EUR"
 
     btc_eur = 0.09889965 * get_info(btc_eur)
     bch_eur = 0.1 * get_info(bch_eur)
-    
+    iota_eur = 1 * get_info(iota_eur)
+
     mymoney = btc_eur + bch_eur
-    print("BTC:%.2dEUR\nBCH:%.2fEUR\nSum:%.2fEUR " % (btc_eur, bch_eur, mymoney))
+    print("BTC:%.2dEUR\nBCH:%.2fEUR\nIOTA:%.2fEUR\nSum:%.2fEUR " % (btc_eur, bch_eur, iota_eur, mymoney))
 
 def get_info(url):
     "get info and save it"
